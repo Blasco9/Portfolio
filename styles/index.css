@@ -130,6 +130,7 @@ table {
 body {
 	background-color: #34495e;
 	color: #ecf0f1;
+	font-family: sans-serif;
 }
 
 /* HEADER */
@@ -176,4 +177,79 @@ body {
   border: 1px solid #ecf0f1;
   border-radius: 5px;
   padding: 10px;
+}
+
+/* MAIN */
+.main-container {
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* PROJECTS */
+.projects-title {
+	font-size: 3em;
+	text-decoration: underline;
+	margin: 2em 0 1.3em 0;
+}
+
+.project-card {
+	display: flex;
+	text-align: left;
+	background-color: #222f3e;
+	border-radius: 10px;
+	overflow: hidden;
+	min-height: 250px;
+	box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+	margin-bottom: 60px;
+}
+
+.project-img-1 {
+	width: 50%;
+	background: url('/images/Calishop.bmp') left/cover;
+}
+
+.project-img-2 {
+	width: 50%;
+	background: url('/images/CourseReviews.bmp') right/cover;
+}
+
+.project-img-3 {
+	width: 50%;
+	background: url('/images/WatchSomething.bmp') left/cover;
+}
+
+.project-info {
+	padding: 30px;
+}
+
+.project-name {
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+.project-description {
+	line-height: 2;
+	margin-bottom: 40px;
+}
+
+.project-tags .tag {
+	color: #b0cae7;
+	border: 1px solid #b0cae7;
+	border-radius: 5px;
+	padding: 5px 6px;
+	margin: 0 5px;
+}
+
+.project-links {
+	margin-top: 30px;
+}
+
+.project-links a {
+	color: #34495e;
+	text-decoration: none;
+	background-color: #ecf0f1;
+	padding: 6px;
+	margin: 0 5px;
+	border-radius: 5px;
 }
