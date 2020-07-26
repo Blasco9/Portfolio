@@ -180,10 +180,12 @@ hr {
 .intro-name {
 	font-size: 4em;
 	margin-bottom: 0.5em;
+	transition: color 0.5s;
 }
 
 .intro-description {
 	margin-bottom: 3em;
+	transition: color 0.5s;
 }
 
 .intro-link {
@@ -192,6 +194,7 @@ hr {
 	border: 1px solid #ecf0f1;
 	border-radius: 5px;
 	padding: 10px;
+	transition: color 0.5s;
 }
 
 /* MAIN */
