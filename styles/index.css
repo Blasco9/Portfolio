@@ -157,20 +157,21 @@ hr {
 
 .nav-list {
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	list-style-type: none;
 	padding: 1.5em 0;
 }
 
 .nav-link {
 	color: inherit;
-	margin: 0 5em;
 	text-decoration: none;
 	font-size: 1.5em;
+	transition: 0.3s;
 }
 
 .nav-link:hover {
 	color: #b0cae7;
+	font-size: 1.6em;
 }
 
 .intro {
@@ -203,8 +204,14 @@ hr {
 	transition: color 0.5s, background-color 0.5s;
 }
 
+.intro-link-inactive {
+	color: transparent;
+	border-color: transparent;
+}
+
 .intro-link:hover {
-	background-color: #18222e;
+	color: #376797;
+	background-color: #ecf0f1;
 }
 
 /* MAIN */
@@ -353,7 +360,7 @@ footer a:hover {
 	color: #cee4fd;
 }
 
-/* ANIMATION */
+/* ANIMATIONS */
 .slide-left {
 	animation-name: slide-left;
 	animation-duration: 3s;

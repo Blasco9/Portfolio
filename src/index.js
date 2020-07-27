@@ -14,24 +14,22 @@ window.onscroll = function() {
     nav.style.backgroundColor = 'transparent';
   }
 
-  if((window.scrollY + nav.offsetHeight) > introName.offsetTop) {
+  if((window.scrollY + nav.offsetHeight + 50) > introName.offsetTop) {
     introName.style.color = 'transparent';
   } else {
     introName.style.color = 'inherit';
   }
 
-  if((window.scrollY + nav.offsetHeight) > introDescription.offsetTop) {
+  if((window.scrollY + nav.offsetHeight + 50) > introDescription.offsetTop) {
     introDescription.style.color = 'transparent';
   } else {
     introDescription.style.color = 'inherit';
   }
 
-  if((window.scrollY + nav.offsetHeight) > introLink.offsetTop) {
-    introLink.style.color = 'transparent';
-    introLink.style.borderColor = 'transparent';
+  if((window.scrollY + nav.offsetHeight + 50) > introLink.offsetTop) {
+    introLink.classList.add('intro-link-inactive');
   } else {
-    introLink.style.color = 'inherit';
-    introLink.style.borderColor = 'inherit';
+    introLink.classList.remove('intro-link-inactive');
   }
 
   if((window.scrollY + nav.offsetHeight) > project1.offsetTop) {
