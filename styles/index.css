@@ -152,6 +152,7 @@ hr {
 	position: fixed;
 	width: 100%;
 	transition: background-color 0.5s;
+	z-index: 1000;
 }
 
 .nav-list {
@@ -169,7 +170,7 @@ hr {
 }
 
 .intro {
-	height: 70vh;
+	height: 80vh;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -207,6 +208,7 @@ hr {
 /* PROJECTS */
 .project-card {
 	display: flex;
+	position: relative;
 	text-align: left;
 	background-color: #222f3e;
 	border-radius: 10px;
@@ -326,4 +328,27 @@ footer p {
 footer a {
 	color: #b0cae7;
 	text-decoration: none;
+}
+
+/* ANIMATION */
+.slide-left {
+	animation-name: slide-left;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-left {
+	from {left: 0px}
+  to {left: -2000px}
+}
+
+.slide-right {
+	animation-name: slide-right;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-right {
+	from {left: -2000px}
+  to {left: 0px}
 }
