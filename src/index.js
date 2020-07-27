@@ -33,26 +33,26 @@ window.onscroll = function() {
   }
 
   if((window.scrollY + nav.offsetHeight) > project1.offsetTop) {
-    project1.classList.remove('slide-right')
-    project1.classList.add('slide-left')
+    project1.classList.remove('show-card')
+    project1.classList.add('hide-card')
   } else {
-    project1.classList.remove('slide-left')
-    project1.classList.add('slide-right')
+    project1.classList.remove('hide-card')
+    project1.classList.add('show-card')
   }
 
   if((window.scrollY + nav.offsetHeight) > project2.offsetTop) {
-    project2.classList.remove('slide-right')
-    project2.classList.add('slide-left')
+    project2.classList.remove('show-card')
+    project2.classList.add('hide-card')
   } else {
-    project2.classList.remove('slide-left')
-    project2.classList.add('slide-right')
+    project2.classList.remove('hide-card')
+    project2.classList.add('show-card')
   }
 
   if((window.scrollY + nav.offsetHeight) > project3.offsetTop) {
-    project3.classList.remove('slide-right')
-    project3.classList.add('slide-left')
+    project3.classList.remove('show-card')
+    project3.classList.add('hide-card')
   } else {
-    project3.classList.remove('slide-left')
-    project3.classList.add('slide-right')
+    project3.classList.remove('hide-card')
+    project3.classList.add('show-card')
   }
 }

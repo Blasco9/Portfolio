@@ -429,13 +429,17 @@ hr {
 	text-decoration: none;
 }
 
+.contact-links img {
+	transition: 0.3s;
+}
+
 .contact-links img:hover {
-	opacity: 0.6;
+	transform: rotate(-10deg);
 }
 
 /* FOOTER */
 footer {
-	background-color: #0d151f;
+	background-color: #222f3e;
 	padding: 3em;
 	text-align: center;
 	font-size: 20px;
@@ -455,32 +459,32 @@ footer a:hover {
 }
 
 /* ANIMATIONS */
-.slide-left {
-	animation-name: slide-left;
-	animation-duration: 3s;
+.hide-card {
+	animation-name: hide;
+	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
 }
 
-@keyframes slide-left {
+@keyframes hide {
 	from {
-		left: 0px;
+		transform: rotateY(0deg);
 	}
 	to {
-		left: -2000px;
+		transform: rotateY(90deg);
 	}
 }
 
-.slide-right {
-	animation-name: slide-right;
-	animation-duration: 3s;
+.show-card {
+	animation-name: show;
+	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
 }
 
-@keyframes slide-right {
+@keyframes show {
 	from {
-		left: -2000px;
+		transform: rotateY(90deg);
 	}
 	to {
-		left: 0px;
+		transform: rotateY(0deg);
 	}
 }
