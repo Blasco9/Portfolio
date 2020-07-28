@@ -126,6 +126,9 @@ table {
 }
 
 /* GLOBAL */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
 	background-color: #34495e;
@@ -188,12 +191,12 @@ hr {
 
 .intro-name {
 	font-size: 4em;
-	margin-bottom: 0.5em;
+	margin-bottom: 1em;
 	transition: color 0.5s;
 }
 
 .intro-description {
-	margin-bottom: 3em;
+	margin-bottom: 5em;
 	transition: color 0.5s;
 }
 
@@ -253,29 +256,31 @@ hr {
 	text-align: left;
 	background-color: #222f3e;
 	border-radius: 10px;
-	overflow: hidden;
 	min-height: 250px;
 	box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
 	margin-bottom: 60px;
 }
 
-.project-img-1 {
-	width: 50%;
+.project-img {
+	width: 75%;
+	border-radius: 10px;
+}
+
+.img-1 {
 	background: url('/images/Calishop.bmp') left/cover;
 }
 
-.project-img-2 {
-	width: 50%;
+.img-2 {
 	background: url('/images/CourseReviews.bmp') right/cover;
 }
 
-.project-img-3 {
-	width: 50%;
+.img-3 {
 	background: url('/images/WatchSomething.bmp') left/cover;
 }
 
 .project-info {
 	padding: 30px;
+	box-sizing: border-box;
 }
 
 .project-name {
@@ -416,12 +421,14 @@ hr {
 }
 
 .contact-links {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	row-gap: 50px;
 	margin-top: 50px;
 }
 
 .contact-links div {
-	width: 33.33%;
+	justify-self: center;
 }
 
 .contact-links a {
@@ -486,5 +493,63 @@ footer a:hover {
 	}
 	to {
 		transform: rotateY(0deg);
+	}
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+	.project-card {
+		display: block;
+		height: 350px;
+		transform-style: preserve-3d;
+		transition: transform 1s;
+	}
+
+	.project-card:hover {
+		transform: rotateY(180deg);
+	}
+
+	.project-img, .project-info {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+	}
+
+	.project-info {
+		transform: rotateY(180deg)
+	}
+
+	.project-name, .project-tags, .project-links {
+		text-align: center;
+	}
+
+	.hide-card, .show-card {
+		animation: none;
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.project-card {
+		height: 400px;
+	}
+
+	.project-tags {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.project-tags .tag {
+		margin-bottom: 10px;
+	}
+
+	.skills {
+		width: 100%;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+	}
+
+	footer {
+		padding: 2em;
 	}
 }
