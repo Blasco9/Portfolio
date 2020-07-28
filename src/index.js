@@ -6,9 +6,11 @@ const introLink = document.querySelector('.intro-link');
 const project1 = document.querySelector('.project-card');
 const project2 = document.querySelector('.project-card:nth-of-type(2)');
 const project3 = document.querySelector('.project-card:nth-of-type(3)');
+const menuIcon = document.querySelector('.menu-icon');
+const navLinks = document.querySelectorAll('.nav-list li');
 let addedPixels = 50;
 
-window.onscroll = function () {
+window.onscroll = () => {
 	window.innerWidth < 500 ? (addedPixels = 0) : addedPixels;
 
 	if (window.scrollY > intro.scrollHeight - nav.offsetHeight) {
@@ -61,3 +63,19 @@ window.onscroll = function () {
 		}
 	}
 };
+
+const toggelNav = () => {
+	menuIcon.classList.toggle('rotated');
+	nav.style.backgroundColor = 'rgba(34, 47, 62, 0.9)';
+	hideLinks();
+};
+
+const hideLinks = () => {
+	for (let i = 0; i < navLinks.length; i++) {
+		navLinks[i].addEventListener('click', toggelNav);
+		navLinks[i].classList.toggle('d-none');
+		navLinks[i].classList.toggle('fade-in');
+	}
+};
+
+menuIcon.addEventListener('click', toggelNav);
