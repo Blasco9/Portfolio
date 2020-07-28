@@ -6,27 +6,30 @@ const introLink = document.querySelector('.intro-link');
 const project1 = document.querySelector('.project-card');
 const project2 = document.querySelector('.project-card:nth-of-type(2)');
 const project3 = document.querySelector('.project-card:nth-of-type(3)');
+let addedPixels = 50;
 
 window.onscroll = function () {
+	window.innerWidth < 500 ? (addedPixels = 0) : addedPixels;
+
 	if (window.scrollY > intro.scrollHeight - nav.offsetHeight) {
 		nav.style.backgroundColor = 'rgba(34, 47, 62, 0.9)';
 	} else {
 		nav.style.backgroundColor = 'transparent';
 	}
 
-	if (window.scrollY + nav.offsetHeight + 50 > introName.offsetTop) {
+	if (window.scrollY + nav.offsetHeight + addedPixels > introName.offsetTop) {
 		introName.style.color = 'transparent';
 	} else {
 		introName.style.color = 'inherit';
 	}
 
-	if (window.scrollY + nav.offsetHeight + 50 > introDescription.offsetTop) {
+	if (window.scrollY + nav.offsetHeight + addedPixels > introDescription.offsetTop) {
 		introDescription.style.color = 'transparent';
 	} else {
 		introDescription.style.color = 'inherit';
 	}
 
-	if (window.scrollY + nav.offsetHeight + 50 > introLink.offsetTop) {
+	if (window.scrollY + nav.offsetHeight + addedPixels > introLink.offsetTop) {
 		introLink.classList.add('intro-link-inactive');
 	} else {
 		introLink.classList.remove('intro-link-inactive');
