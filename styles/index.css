@@ -280,15 +280,15 @@ hr {
 }
 
 .img-1 {
-	background: url('/images/Calishop.png') left/cover;
+	background: url('../images/Calishop.png') left/cover;
 }
 
 .img-2 {
-	background: url('/images/CourseReviews.png') right/cover;
+	background: url('../images/CourseReviews.png') right/cover;
 }
 
 .img-3 {
-	background: url('/images/WatchSomething.png') left/cover;
+	background: url('../images/WatchSomething.png') left/cover;
 }
 
 .project-info {
